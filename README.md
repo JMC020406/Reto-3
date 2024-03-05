@@ -17,7 +17,7 @@ i:entero
 
   [A calcular]
 Inicio
-Para i:= 2 Hasta n hacer
+Para i:= 2
   Mientras (i<n) Entonces
     Si modulo(n,i) == 0 Entonces
       Escribir("n no es un número primo")
