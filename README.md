@@ -51,3 +51,28 @@ graph TD;
 
 
 ### Diagrama de flujo 2
+```mermaid
+graph TD;
+  Z(inicio)-->A(número x es número entero)
+  A-->B(número d es pareja de digitos sacados de separar x de
+  derecha a izquierda en parejas de dígitos)
+  B-->C(número b es la raíz)
+  C-->D(número r es el residuo)
+  D-->E(número i varia de 1 a 9)
+  E-->F(Definir x)
+  F-->H(Separar x en parejas de dígitos de derecha a izquierda)
+  H-->I(Tomar primera pareja de dígitos a la izquierda y denominarla d)
+  I-->J(Buscar b tal que d-b**2 == r , donde b**2 > r)
+  J-->K{¿Aun quedan más parejas de dígitos?}
+  K-->|si|L(Tomar siguiente pareja de la izquierda y hacer 100*r + d = d)
+  K-->|no|M(El valor de b es la raíz de x)
+  M-->|r == 0|N(b es la raíz exacta)
+  M-->|r > 0|O(b es una aproximado de la raíz)
+  L-->P(Tomar el resultado y calcular d-20b+i *i == r ,
+  donde 20b+i > r .Para el calculo primero hay que resolver el
+  20b+i y luego si seguir la jerarquía como siempre)
+  P-->Q(Tomar resultado y hacer 10b + i == b)
+  Q-->K
+  O-->R(Fin)
+  N-->R
+```
