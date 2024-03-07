@@ -46,9 +46,33 @@ graph TD;
 ```
 
 ## Raices cuadradas
+Ya que estos cálculos se vuelven un poco complejos al momento de hacerlo con decimales entonces pense en solo hacerlo con números enteros positivos (ya que los negativos no se les puede sacar raíz en los reales). Así que tanto el radicando como la raíz en estos calculos van a ser enteros positivos y aproximaciones a los valores reales.
+
 ### pseudocódigo 2
+```pseudocode
+  [Variables]
+x:entero
+d:parejas de dígitos de x hechas de derecha a izquierda
+b:entero
+r:entero
+i:entero en el rango 1 hasta 9
 
-
+  [A calcular]
+Inicio
+Dividir x en parejas de derecha a izquierda
+Tomar primera pareja de la izquierda y denominarla d
+Hacer d-b**2 == r y b**2 > r
+  Si x tiene otra pareja (d) Entonces
+    Hacer 100*r + d == d
+    Hacer d-(20b+i)*i == r y 20B+i > r
+    Hacer 10b + i == b
+    Si x tiene otra pareja (d) Entonces
+    Repetir
+  Si no
+    Escribir ("El número b es la raíz de x)
+  Fin Mientras
+Fin  
+```
 
 ### Diagrama de flujo 2
 ```mermaid
